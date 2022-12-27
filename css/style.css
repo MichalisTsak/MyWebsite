@@ -1,0 +1,31 @@
+body {
+  background-color: #deb887;
+}
+
+hr {
+
+  /*background-color: antiquewhite;*/
+  width:100%;
+  border-style: dotted none none;
+  border-width: 5px;
+  border-color: slategrey;
+}
+h1{
+  color: #9387de;
+  font-style: normal;
+  font-family: "Garamond";
+}
+h2{
+
+  color: #d2de87;
+ font-weight: bolder;
+  font-family: "Garamond";
+
+}
+h3{
+  color: #9387de;
+}
+h4{
+  color: #9387de;
+
+}
