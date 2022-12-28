@@ -1,3 +1,4 @@
+/***************************** TAG SELECTORS**********************/
 body {
   background-color: #deb887;
 }
@@ -25,7 +26,13 @@ h2{
 h3{
   color: #9387de;
 }
-h4{
+img{
+}
+/************************** CLASS SELECTORS*******************/
+.myimage{
+  border-radius: 100%;
+}
+/************************** ID SELECTORS*******************/
+#heading{
   color: #9387de;
-
 }
