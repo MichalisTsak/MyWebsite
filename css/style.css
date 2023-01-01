@@ -1,6 +1,7 @@
 /***************************** TAG SELECTORS**********************/
 body {
   background-color: #deb887;
+
 }
 
 hr {
@@ -15,22 +16,36 @@ h1{
   color: #9387de;
   font-style: normal;
   font-family: "Garamond";
-}
-h2{
 
+}
+h2 {
   color: #d2de87;
- font-weight: bolder;
+  font-weight: bolder;
   font-family: "Garamond";
+}
 
-}
-h3{
-  color: #9387de;
-}
-img{
-}
 /************************** CLASS SELECTORS*******************/
 .myimage{
+  display: block;
+  width: 190px;
+  height: 210px;
   border-radius: 100%;
+
+}
+
+.up{
+  /*an image is an inline property so you cant center it with margin,padding etc */
+  /* display: flex; */      /*flex, tells the browser that the div is the parent container and the image is a flex item.*/
+   /*  justify-content: center; -> to center the div with the image   */
+  padding: 10px;
+
+}
+
+.center{
+  padding-top: 5px;
+}
+.down{
+  padding-top: 12px;
 }
 /************************** ID SELECTORS*******************/
 #heading{
