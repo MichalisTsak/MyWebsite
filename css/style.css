@@ -27,7 +27,7 @@ h2 {
 /************************** CLASS SELECTORS*******************/
 .myimage{
   display: block;
-  width: 190px;
+  width: 180px;
   height: 210px;
   border-radius: 100%;
 
@@ -44,7 +44,7 @@ h2 {
 .center{
   padding-top: 5px;
 }
-.down{
+.bottom{
   padding-top: 12px;
 }
 /************************** ID SELECTORS*******************/
