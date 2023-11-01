@@ -5,6 +5,27 @@
     <title>Michalis Tsakiroglou</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico?v=2">
+    <style>
+      .bullet-point-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .bullet-point {
+        display: block;
+        padding: 10px 20px;
+        margin: 10px;
+        font-weight: bolder;
+        font-size: 21px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 45%; /* Adjust the width to create two columns */
+        border: 4px solid #d2de87; /* Use the h2 color for the border */
+        border-radius: 15px;
+        background-color: #deb887; /* Use the body background color */
+        color: #9387de; /* Use the h1 color */
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body>
@@ -30,29 +51,24 @@
 
   <div class="center">
   <hr>
-  <h2>My education:</h2>
+  <font size="+1" font-weight="bolder"><h2>My education:</h2></font>
   <p><strong>High school</strong> | GPA:19
     <br>
     <strong>University</strong>: <a href="https://www.ee.duth.gr/" target="_blank">Electrical and Computer Engineer at
       DUTh</a>
     <hr>
-  </div>
-
-  <div class="bottom">
-    <font size="+2"><strong>&#10147;<a href="Volunteering.html" target="_blank">Volunteering</a></strong> </font>
-    <br> <br> <br>
-    <font size="+2"><strong>&#10147;<a href="Contact.html" target="_blank">Contact Me</a></strong> </font>
-    <br> <br> <br>
-    <font size="+2"><strong>&#10147;<a href="RealContact.html" target="_blank">Real Contact</a></strong> </font>
-
-    <br> <br> <br>
-    <font size="+2"><strong>&#10147;<a href="Skills.html" target="_blank">My Skills</a></strong> </font>
-
-    <br> <br> <br>
-    <font size="+2"><strong>&#10147;<a href="./Projects/Myproj.html" target="">My Projects</a></strong> </font>
-
-
-  </div>
+    <div class="bottom">
+      <div class="bullet-point-container">
+        <a href="Volunteering.html" class="bullet-point" target="_blank">Volunteering</a>
+  
+        <a href="RealContact.html" class="bullet-point" target="_blank">Contact Me</a>
+      </div>
+  
+      <div class="bullet-point-container">
+        <a href="Skills.html" class="bullet-point" target="_blank">My Skills</a>
+  
+        <a href="./Projects/Myproj.html" class="bullet-point" target="_blank">My Projects</a>
+      </div>
 
   </body>
 </html>
