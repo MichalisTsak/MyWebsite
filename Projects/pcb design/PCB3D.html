@@ -4,23 +4,26 @@
 <head>
   <title>&lt;model-viewer&gt; template</title>
   <meta charset="utf-8">
-  <meta name="description" content="<model-viewer> template">
+  <meta name="description" content="&lt;model-viewer&gt; template">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" href="./css/" rel="stylesheet">
+  <link type="text/css" href="./css/styles.css" rel="stylesheet"/>
 </head>
-
-<model-viewer src="PCB1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.52" data-dashlane-shadowhost="true" data-dashlane-observed="true" environment-image="aircraft_workshop_01_1k.hdr" shadow-softness="1" tone-mapping="commerce" exposure="0.62">
-  <div class="progress-bar hide" slot="progress-bar">
-      <div class="update-bar"></div>
-  </div>
-  <button slot="ar-button" id="ar-button">
-      View in your space
-  </button>
-  <div id="ar-prompt">
-      <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-  </div>
-</model-viewer>
-
-
+<body>
+  <!-- <model-viewer> HTML element -->
+  <model-viewer src="PCB1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.52" data-dashlane-shadowhost="true" data-dashlane-observed="true" environment-image="aircraft_workshop_01_1k.hdr" shadow-softness="1" tone-mapping="commerce" exposure="0.62">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="ar_hand_prompt.png">
+    </div>
+  </model-viewer>  
+  <script src="./js/script.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+</body>
 </html>
 
