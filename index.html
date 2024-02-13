@@ -5,43 +5,119 @@
     <title>Michalis Tsakiroglou</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico?v=2">
-    <style>
-      .bullet-point-container {
-        display: flex;
-        justify-content: space-between;
-      }
-      .bullet-point {
-        display: block;
-        padding: 10px 20px;
-        margin: 10px;
-        font-weight: bolder;
-        font-size: 21px;
-        text-transform: uppercase;
-        text-align: center;
-        width: 45%; /* Adjust the width to create two columns */
-        border: 4px solid #d2de87; /* Use the h2 color for the border */
-        border-radius: 15px;
-        background-color: #deb887; /* Use the body background color */
-        color: #9387de; /* Use the h1 color */
-        text-decoration: none;
-      }
-    </style>
+   
   </head>
 
   <body>
 
-  <div class="up">
 
-    <table cellspacing="9">
-      <tr>
-        <td><img class="myimage" src="img/imgmine.jpg" alt="me"></td> <!-- sthn istoselida einai img/imgmine oxi /img/...-->
+
+    <nav>
+      <ul class="nav-list">
+        <li onclick="showSidebar()"><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class="active" style=" padding-top: 10px; padding-bottom: 10px; " >
+          <a href="index.html"   aria-current="page"><span>Home</span></a>
+        </li>
+         <!-- <li>
+            <a href="about.html">About</a>   Maybe add an about me page?
+          </li> -->
+        <li   style=" padding-top: 10px; padding-bottom: 10px; ">
+          <a href="Volunteering.html" >Volunteering</a>
+        </li>
+        <li  style=" padding-top: 10px; padding-bottom: 10px; "> 
+          <a href="Blog.html">Blog</a>
+        </li>
+        <li style=" padding-top: 10px; padding-bottom: 10px; ">
+          <a href="RealContact.html" >Contact Me</a>
+        </li>
+        <!-- <li>
+          <a href="skills.html">My skills</a>  maybe add it like a sub-navbar that will have the icons in a carousel
+        </li> -->
+      <li style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="./Projects/Myproj.html" >Projects</a>
+      </li>
+      <li  style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="learning.html" >Learning</a>
+      </li>
+      
+      
+      </ul>
+  
+      <ul class="sidebar">
+        <li class="active" style=" padding-top: 10px; padding-bottom: 10px; " >
+          <a href="index.html"   aria-current="page"><span>Home</span></a>
+        </li>
+         <!-- <li>
+            <a href="about.html">About</a>   Maybe add an about me page?
+          </li> -->
+        <li   style=" padding-top: 10px; padding-bottom: 10px; ">
+          <a href="Volunteering.html" >Volunteering</a>
+        </li>
+        <li  style=" padding-top: 10px; padding-bottom: 10px; "> 
+          <a href="Blog.html">Blog</a>
+        </li>
+        <li style=" padding-top: 10px; padding-bottom: 10px; ">
+          <a href="RealContact.html" >Contact Me</a>
+        </li>
+        <!-- <li>
+          <a href="skills.html">My skills</a>  maybe add it like a sub-navbar that will have the icons in a carousel
+        </li> -->
+      <li style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="./Projects/Myproj.html" >Projects</a>
+      </li>
+      <li  style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="learning.html" >Learning</a>
+      </li>
+      
+      </ul>
+   </nav> 
+
+
+    <!-- <nav>
+      <ul class="nav-list">
+        <li class="active" style=" padding-top: 10px; padding-bottom: 10px; " >
+          <a href="index.html"   aria-current="page"><span>Home</span></a>
+        </li> -->
+    
+        <!-- <li>
+            <a href="about.html">About</a>   Maybe add an about me page?
+          </li> -->
+        <!-- <li   style=" padding-top: 10px; padding-bottom: 10px; ">
+          <a href="Volunteering.html" >Volunteering</a>
+        </li>
+        <li  style=" padding-top: 10px; padding-bottom: 10px; "> 
+          <a href="Blog.html">Blog</a>
+        </li>
+        <li style=" padding-top: 10px; padding-bottom: 10px; ">
+          <a href="RealContact.html" >Contact Me</a>
+        </li> -->
+        
+        <!-- <li>
+          <a href="skills.html">My skills</a>  maybe add it like a sub-navbar that will have the icons in a carousel
+        </li> -->
+      
+        <!-- <li style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="./Projects/Myproj.html" >Projects</a>
+      </li>
+      <li  style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="learning.html" >Learning</a>
+      </li>
+      
+      </ul>
+  
+     </nav> -->
+
+
+<div class="container">
+  <div class="up">   
+      <img class="myimage" src="img/imgmine.jpg" alt="me"></td> <!-- sthn istoselida einai img/imgmine oxi /img/...-->
         <td>
           <h1 id="heading">Michalis Tsakiroglou</h1>
           <br><br>        <br><br>
           <em><strong>Work</strong>:University Student</em>
           <br>
           <em><strong>Base</strong>:Xanthi, Thrace</em>
-          <p>Hello, I am a confused human being who likes to try new things, hence the programming.</p>
+          <p>Hello, I am a confused human being who likes to try new things, hence my life.</p>
         </td>
       </tr>
     </table>
@@ -57,18 +133,15 @@
     <strong>University</strong>: <a href="https://www.ee.duth.gr/" target="_blank">Electrical and Computer Engineer at
       DUTh</a>
     <hr>
-    <div class="bottom">
-      <div class="bullet-point-container">
-        <a href="Volunteering.html" class="bullet-point" target="_blank">Volunteering</a>
-  
-        <a href="RealContact.html" class="bullet-point" target="_blank">Contact Me</a>
+  </div>
+
+        <footer><small> © Michalis Tsakiroglou. All Rights Reserved. </small></footer>
       </div>
-  
-      <div class="bullet-point-container">
-        <a href="Skills.html" class="bullet-point" target="_blank">My Skills</a>
-  
-        <a href="./Projects/Myproj.html" class="bullet-point" target="_blank">My Projects</a>
-      </div>
+
+      <script src="js/nav.js"></script>
+
 
   </body>
 </html>
+
+

@@ -2,9 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>don worry</title>
+    <meta name="view-transition" content="same origin" />
+    <link rel="stylesheet" href="css/volstyle.css">
+    
+
+    <style>
+
+ /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+
+.timeline-event-thumbnail {
+  -moz-transition: box-shadow 0.5s ease-in 0.1s;
+  -o-transition: box-shadow 0.5s ease-in 0.1s;
+  -webkit-transition: box-shadow 0.5s ease-in;
+  -webkit-transition-delay: 0.1s;
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: white;
+  font-size: 0.75em;
+  background-color: black;
+  -moz-box-shadow: inset 0 0 0 0em #ef795a;
+  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
+  box-shadow: inset 0 0 0 0em #ef795a;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
+
+    </style>
+
+<title>don worry</title>
+
 </head>
+
 <body>
+ 
+  <nav>
+    <ul class="nav-list">
+      <li  style=" padding-top: 10px; padding-bottom: 10px; " >
+        <a href="index.html"  ><span>Home</span></a>
+      </li>
+       <!-- <li>
+          <a href="about.html">About</a>   Maybe add an about me page?
+        </li> -->
+      <li   style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="Volunteering.html" >Volunteering</a>
+      </li>
+      <li  style=" padding-top: 10px; padding-bottom: 10px; "> 
+        <a href="Blog.html">Blog</a>
+      </li>
+      <li style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="RealContact.html" >Contact Me</a>
+      </li>
+      <!-- <li>
+        <a href="skills.html">My skills</a>  maybe add it like a sub-navbar that will have the icons in a carousel
+      </li> -->
+    <li style=" padding-top: 10px; padding-bottom: 10px; ">
+      <a href="./Projects/Myproj.html" >Projects</a>
+    </li>
+    <li  class="active" style=" padding-top: 10px; padding-bottom: 10px; ">
+      <a href="learning.html"  aria-current="page">Learning</a>
+    </li>
+    
+    </ul>
+
+   </nav>
+
+       <header>
+        <p>Worked on all modern browers</p>
+        <h1>CSS based responsive timeline</h1>
+    </header>
+    
+    <ul class="timeline">
+      <!-- Item 1 -->
+      <li>
+        <div class="direction-r">
+          <div class="flag-wrapper">
+            <span class="hexa"></span>
+            <span class="flag">Lorem ipsum.</span>
+            <span class="time-wrapper"><span class="time">Feb 2015</span></span>
+          </div>
+          <div class="desc">Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation deserunt proident.</div>
+        </div>
+      </li>
+    
+      <!-- Item 2 -->
+      <li>
+        <div class="direction-l">
+          <div class="flag-wrapper">
+            <span class="hexa"></span>
+            <span class="flag">Lorem ipsum Anim.</span>
+            <span class="time-wrapper"><span class="time">Dec 2014</span></span>
+          </div>
+          <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim cupidatat laborum dolore.</div>
+        </div>
+      </li>
+    
+      <!-- Item 3 -->
+      <li>
+        <div class="direction-r">
+          <div class="flag-wrapper">
+            <span class="hexa"></span>
+            <span class="flag">Lorem Occaecat.</span>
+            <span class="time-wrapper"><span class="time">July 2014</span></span>
+          </div>
+          <div class="desc">Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur cillum cupidatat reprehenderit sit id dolor consectetur ut.</div>
+        </div>
+      </li>
+    </ul>
 
 </body>
 </html>

@@ -1,37 +1,161 @@
-/***************************** TAG SELECTORS**********************/
+:root {
+  --body-bg: white;
+  --nav-bg: rgb(78, 154, 240);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: system-ui;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
 body {
-  background-color: #deb887;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  min-height: 100vh;   /* if you if you put more content so that the user has to scroll you change it to 200vh */
+  font-size: 1rem;
+  background: var(--body-bg);
+  padding-inline-start: 15rem;
+  color: #123;
+
+  overflow-x: hidden; /* Hide horizontal scrollbar caused by padding-inline-start */
 
 }
 
-hr {
+/* for the scroll */
 
-  /*background-color: antiquewhite;*/
-  width:100%;
-  border-style: dotted none none;
-  border-width: 5px;
-  border-color: slategrey;
-}
-h1{
-  color: #9387de;
-  font-style: normal;
-  font-family: "Garamond";
-
-}
-h2 {
-  color: #d2de87;
-  font-weight: bolder;
-  font-family: "Garamond";
+body::-webkit-scrollbar{
+    width: 0.25rem;
 }
 
-/************************** CLASS SELECTORS*******************/
+
+body::-webkit-scrollbar-track{
+  background: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(1, 3, 15);
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 5px;
+  color: white;
+} 
+
+/* nav */
+
+/* nav */
+
+nav {
+  /* if you put more content so that the user has to scroll you should add position: sticky; , top:0; , max-height=100vh(or svh for mobile); */
+  position: sticky;   
+  max-height: 100svh;
+  background-color: var(--nav-bg);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-block: 2rem;
+  transition: width 0.4s ease;
+}
+
+
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  gap: 3rem;
+  padding-block: 1rem;
+  font-size: 1.2rem;
+}
+
+.nav-list a {
+  color: rgb(5, 25, 45);
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+
+}
+
+.nav-list li {
+  padding-block: 0.1rem;
+  padding-inline: 1.5rem;
+  margin-inline: 2rem 0;
+  border-radius: 100vw 0 0 100vw;
+  /* prevent animation glitch on right side */
+  box-shadow: 2px 0 0 var(--body-bg);
+
+
+  transition: background-color 0.3s ease;
+
+}
+
+.nav-list li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-list li.active{
+  view-transition-name: navtag;
+  background-color: var(--body-bg);
+  position: relative;
+
+  transition: background-color 0.3s ease; /* Add transition for the active state */
+
+}
+
+::view-transition-group(navtag) {
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+}
+
+
+.nav-list li.active::before,
+.nav-list li.active::after {
+  --border-radius: 1.5rem;
+
+  content: '';
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius) ;
+  right: 0rem;
+  
+  background-color: var(--nav-bg);
+}
+
+.nav-list li.active::before{
+  top:calc(var(--border-radius) * -1);
+  box-shadow: 8px 8px 0 8px var(--body-bg);
+  border-radius:0 0 100vw 0;
+}
+
+
+.nav-list li.active::after{
+  box-shadow: 8px -8px 0 8px var(--body-bg);
+  border-radius:0 100vw 0  0;
+  bottom:calc(var(--border-radius) * -1);
+}
+
 .myimage{
   display: block;
   width: 180px;
   height: 210px;
   border-radius: 100%;
-
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
 
 .up{
   /*an image is an inline property so you cant center it with margin,padding etc */
@@ -43,11 +167,52 @@ h2 {
 
 .center{
   padding-top: 5px;
+  width: 100%;
 }
 .bottom{
   padding-top: 12px;
 }
-/************************** ID SELECTORS*******************/
-#heading{
-  color: #9387de;
+
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100vh;
+  
+  z-index: 999;
+  padding:0%;
+  font-size: 1.2rem;
+
+  background-color:  rgba(78, 154, 240, 0.234);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.034);
+  backdrop-filter: blur(10px);
+
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  list-style: none;
 }
+
+
+.sidebar li{
+  width: 100%;  
+
+}
+
+.sidebar a{
+  color: var(--body-bg);
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+}
+
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
