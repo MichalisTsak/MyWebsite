@@ -8,25 +8,12 @@
 
     <style>
 
- /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-
-.timeline-event-thumbnail {
-  -moz-transition: box-shadow 0.5s ease-in 0.1s;
-  -o-transition: box-shadow 0.5s ease-in 0.1s;
-  -webkit-transition: box-shadow 0.5s ease-in;
-  -webkit-transition-delay: 0.1s;
-  transition: box-shadow 0.5s ease-in 0.1s;
-  color: white;
-  font-size: 0.75em;
-  background-color: black;
-  -moz-box-shadow: inset 0 0 0 0em #ef795a;
-  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
-  box-shadow: inset 0 0 0 0em #ef795a;
-  display: inline-block;
-  margin-bottom: 1.2em;
-  padding: 0.25em 1em 0.2em 1em;
+@media(max-width: 980px){
+  .hideOnMobile{
+      display: none;
+  }
+  
 }
-
     </style>
 
 <title>don worry</title>
@@ -37,8 +24,42 @@
  
   <nav>
     <ul class="nav-list">
-      <li  style=" padding-top: 10px; padding-bottom: 10px; " >
-        <a href="index.html"  ><span>Home</span></a>
+      <li onclick="showSidebar(event)"><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+      </li>
+      <li  class="hideOnMobile" style=" padding-top: 10px; padding-bottom: 10px; " >
+        <a href="index.html" ><span>Home</span></a>
+      </li>
+       <!-- <li>
+          <a href="about.html">About</a>   Maybe add an about me page?
+        </li> -->
+      <li class="hideOnMobile"  style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="Volunteering.html" >Volunteering</a>
+      </li>
+      <li class="hideOnMobile"  style=" padding-top: 10px; padding-bottom: 10px; "> 
+        <a href="Blog.html">Blog</a>
+      </li>
+      <!-- <li class="hideOnMobile" style=" padding-top: 10px; padding-bottom: 10px; ">
+        <a href="RealContact.html" >Contact Me</a>
+      </li> -->
+      <!-- <li>
+        <a href="skills.html">My skills</a>  maybe add it like a sub-navbar that will have the icons in a carousel
+      </li> -->
+    <li  class="hideOnMobile" style=" padding-top: 10px; padding-bottom: 10px; ">
+      <a href="./Projects/Myproj.html" >Projects</a>
+    </li>
+    <li  class="hideOnMobile  active" style=" padding-top: 10px; padding-bottom: 10px; ">
+      <a href="learning.html"   aria-current="page" >Learning</a>
+    </li>
+    
+    
+    </ul>
+
+    <ul class="sidebar">
+      <li onclick="hideSidebar(event)">
+        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> </a> 
+      </li>
+      <li class="active" style=" padding-top: 10px; padding-bottom: 10px; " >
+        <a href="index.html"   aria-current="page"><span>Home</span></a>
       </li>
        <!-- <li>
           <a href="about.html">About</a>   Maybe add an about me page?
@@ -49,22 +70,21 @@
       <li  style=" padding-top: 10px; padding-bottom: 10px; "> 
         <a href="Blog.html">Blog</a>
       </li>
-      <li style=" padding-top: 10px; padding-bottom: 10px; ">
+      <!-- <li style=" padding-top: 10px; padding-bottom: 10px; ">
         <a href="RealContact.html" >Contact Me</a>
-      </li>
+      </li> -->
       <!-- <li>
         <a href="skills.html">My skills</a>  maybe add it like a sub-navbar that will have the icons in a carousel
       </li> -->
     <li style=" padding-top: 10px; padding-bottom: 10px; ">
       <a href="./Projects/Myproj.html" >Projects</a>
     </li>
-    <li  class="active" style=" padding-top: 10px; padding-bottom: 10px; ">
-      <a href="learning.html"  aria-current="page">Learning</a>
+    <li  style=" padding-top: 10px; padding-bottom: 10px; ">
+      <a href="learning.html" >Learning</a>
     </li>
     
     </ul>
-
-   </nav>
+ </nav> 
 
        <header>
         <p>Worked on all modern browers</p>
@@ -109,5 +129,7 @@
       </li>
     </ul>
 
+
+    <script src="js/nav.js"></script>
 </body>
 </html>

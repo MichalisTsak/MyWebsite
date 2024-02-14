@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
 :root {
   --body-bg: white;
   --nav-bg: rgb(78, 154, 240);
@@ -8,8 +10,8 @@
 }
 html {
   font-family: system-ui;
+  scroll-behavior: smooth;
 }
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -27,9 +29,8 @@ body {
 /* for the scroll */
 
 body::-webkit-scrollbar{
-    width: 0.25rem;
+    width: 10px;
 }
-
 
 body::-webkit-scrollbar-track{
   background: rgb(255, 255, 255);
@@ -37,7 +38,10 @@ body::-webkit-scrollbar-track{
 
 body::-webkit-scrollbar-thumb {
   background: rgb(1, 3, 15);
+  border-radius: 10px;
 }
+
+
 
 footer {
   position: relative;
@@ -150,7 +154,7 @@ nav {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
+  padding-left: 10px;
 }
 
 
@@ -177,14 +181,14 @@ nav {
   bottom: 0;
   width: 250px;
   height: 100vh;
-  
+  margin: 0;
   z-index: 999;
-  padding:0%;
+  padding: 0;
   font-size: 1.2rem;
 
   background-color:  rgba(78, 154, 240, 0.234);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.034);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(35px);
 
   display: none;
   flex-direction: column;
@@ -212,4 +216,23 @@ nav {
 .sidebar li:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+.menu-button{
+  display: none;
+}
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  body{
+    padding-inline-start: 15rem;
+  }
+  .menu-button{
+    display: block;
+  }
+}
 
+@media(max-width: 500px){
+  .sidebar{
+   width: 100%;  
+  }
+}

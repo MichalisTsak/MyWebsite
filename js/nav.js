@@ -1,8 +1,13 @@
-// nav.js
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  const mainbar = document.querySelector('.nav-list')
-  sidebar.style.display = 'flex'
-  mainbar.style.display = 'none' 
+
+function showSidebar(event){
+  event.preventDefault(); // Prevent the default behavior of the anchor link
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+  // const mainbar = document.querySelector('.nav-list')
+  // mainbar.style.display = 'none' 
+}  
+function hideSidebar(event){
+  event.preventDefault(); // Prevent the default behavior of the anchor link
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
 }
-  

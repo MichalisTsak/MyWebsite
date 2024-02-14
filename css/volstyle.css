@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
 html {
   font-family: system-ui;
 }
@@ -28,7 +30,6 @@ footer {
   color: white;
 } 
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
 
 body{
     font-family: 'Raleway', sans-serif;
@@ -451,3 +452,64 @@ nav {
     bottom:calc(var(--border-radius) * -1);
   }
   
+
+  .sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100vh;
+    margin: 0;
+    z-index: 999;
+    padding: 0;
+    font-size: 1.2rem;
+  
+    background-color:  rgba(78, 154, 240, 0.234);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.034);
+    backdrop-filter: blur(10px);
+  
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+    list-style: none;
+  }
+  
+  
+  .sidebar li{
+    width: 100%;  
+  
+  }
+  
+  .sidebar a{
+    color: var(--body-bg);
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+  }
+  
+  
+  .sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    body{
+      padding-inline-start: 15rem;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+  
+  @media(max-width: 500px){
+    .sidebar{
+     width: 100%;  
+    }
+  }
