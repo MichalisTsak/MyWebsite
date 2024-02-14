@@ -398,8 +398,6 @@ nav {
     padding-inline: 1.5rem;
     margin-inline: 2rem 0;
     border-radius: 100vw 0 0 100vw;
-    /* prevent animation glitch on right side */
-    box-shadow: 0px 0 0 var(--body-bg);
   
 
     transition: background-color 0.3s ease;
