@@ -399,7 +399,7 @@ nav {
     margin-inline: 2rem 0;
     border-radius: 100vw 0 0 100vw;
     /* prevent animation glitch on right side */
-    box-shadow: 2px 0 0 var(--body-bg);
+    box-shadow: 0px 0 0 var(--body-bg);
   
 
     transition: background-color 0.3s ease;
@@ -442,13 +442,13 @@ nav {
   
   .nav-list li.active::before{
     top:calc(var(--border-radius) * -1);
-    box-shadow: 8px 8px 0 8px var(--body-bg);
+    box-shadow: 6px 6px 0 5px var(--body-bg);
     border-radius:0 0 100vw 0;
   }
   
   
   .nav-list li.active::after{
-    box-shadow: 8px -8px 0 8px var(--body-bg);
+    box-shadow: 6px -6px 0 5px var(--body-bg);
     border-radius:0 100vw 0  0;
     bottom:calc(var(--border-radius) * -1);
   }
